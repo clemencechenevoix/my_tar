@@ -3,6 +3,30 @@
 
 // ----- function ----- //
 
+length_header_t* init_length_header() {
+    length_header_t* struct_length_header = malloc(sizeof(length_header_t));
+    struct_length_header->length = 16;
+    
+    struct_length_header->length_array[0] = 100;
+    struct_length_header->length_array[1] = 8;
+    struct_length_header->length_array[2] = 8;
+    struct_length_header->length_array[3] = 8;
+    struct_length_header->length_array[4] = 12;
+    struct_length_header->length_array[5] = 12;
+    struct_length_header->length_array[6] = 8;
+    struct_length_header->length_array[7] = 1;
+    struct_length_header->length_array[8] = 100;
+    struct_length_header->length_array[9] = 6;
+    struct_length_header->length_array[10] = 2;
+    struct_length_header->length_array[11] = 32;
+    struct_length_header->length_array[12] = 32;
+    struct_length_header->length_array[13] = 8;
+    struct_length_header->length_array[14] = 8;
+    struct_length_header->length_array[15] = 155;
+
+    return struct_length_header;
+}
+
 // --- main var (flags) --- //
 
 int check_argv_1(flag_t* struct_flag, char** argv) {
