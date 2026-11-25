@@ -8,6 +8,10 @@
 // ----- function ----- //
 
 // --- option.c --- //
+
+length_header_t* init_length_header();
+
+// --- main_var (flags) --- //
 flag_t* get_main_var(char**, int);
 
 // --- my_tar.c --- //
