@@ -59,3 +59,8 @@ int check_if_file_exist(char*);
 
 // - error - //
 flag_t* error_flag(flag_t*, char*, int);
+
+// - free - /
+void free_flag(flag_t*);
+void free_start_header(start_header_t*);
+void free_length_header(length_header_t*);

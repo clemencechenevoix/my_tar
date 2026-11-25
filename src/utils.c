@@ -125,3 +125,38 @@ flag_t* error_flag(flag_t* struct_flag, char* error_message, int status){
     struct_flag->status = status;
     return struct_flag;
 }
+
+// - free - //
+
+void free_flag(flag_t* struct_flag) {
+    if(struct_flag->status != -1) {
+        free(struct_flag->array_file);
+    }
+    free(struct_flag);
+}
+
+void free_length_header(length_header_t* struct_length_header) {
+    free(struct_length_header);
+}
+
+void free_start_header(start_header_t* struct_start_header) {
+    // free(struct_start_header->name);
+    // free(struct_start_header->mode);
+    // free(struct_start_header->uid);
+    // free(struct_start_header->gid);
+    // free(struct_start_header->size);
+    // free(struct_start_header->mtime);
+    // free(struct_start_header->chksum);
+    // free(struct_start_header->linkname);
+    // free(struct_start_header->magic);
+    // free(struct_start_header->version);
+    // free(struct_start_header->uname);
+    // free(struct_start_header->gname);
+    // free(struct_start_header->devmajor);
+    // free(struct_start_header->devminor);
+    // free(struct_start_header->prefix);
+    // free(struct_start_header->atime);
+    // free(struct_start_header->ctime);
+
+    free(struct_start_header);
+}
