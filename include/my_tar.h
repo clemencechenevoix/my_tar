@@ -8,6 +8,7 @@
 // ----- function ----- //
 
 // --- option.c --- //
+flag_t* get_main_var(char**, int);
 
 // --- my_tar.c --- //
 void my_tar();
