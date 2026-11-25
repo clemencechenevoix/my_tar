@@ -45,3 +45,10 @@ typedef struct length_header
 
 // ----- Function ----- //
 
+int my_length(char*);
+void my_strcpy(char*, char*);
+void my_memset(char*, char, int);
+int my_write(char*, int);
+int my_power(int, int);
+void my_itoa(char*, int);
+int my_atoi(char*);
