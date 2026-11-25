@@ -52,3 +52,10 @@ int my_write(char*, int);
 int my_power(int, int);
 void my_itoa(char*, int);
 int my_atoi(char*);
+
+// - check - //
+int check_if_char_in_string(char*, char);
+int check_if_file_exist(char*);
+
+// - error - //
+flag_t* error_flag(flag_t*, char*, int);

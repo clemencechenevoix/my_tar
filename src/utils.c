@@ -89,3 +89,39 @@ void my_itoa(char* buffer, int number) {
 int my_atoi(char* string) {
     return 0;
 };
+
+// - check - //
+
+/** 
+* @brief search if the given character is in the given string
+* @param char* string
+* @param char charact
+* @return int 1 if found, else 0
+*/
+int check_if_char_in_string(char* string, char charact) {
+    int index = 0;
+    while (index < my_length(string)) {
+        if (string[index] == charact) {
+            return 1;
+        }
+        index += 1;
+    }
+    return 0;
+}
+
+int check_if_file_exist(char* file_name) {
+    int fichier = open(file_name, O_RDONLY);
+    if(fichier != -1) {
+        close(fichier);
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+// - eror - //
+flag_t* error_flag(flag_t* struct_flag, char* error_message, int status){
+    printf("%s", error_message);
+    struct_flag->status = status;
+    return struct_flag;
+}
